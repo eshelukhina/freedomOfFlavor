@@ -1,0 +1,457 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.search-container {
+    width: 440px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    gap: 15px;
+    border-radius: 8px;
+    border: 1px solid #539F80;
+    opacity: 1; /* Задал видимость, так как 0px делает его невидимым */
+    background-color: white;
+}
+
+.search-container img {
+    width: 14px;
+    height: 14px;
+    margin-left: 15px; /* Отступ от левого края элемента */
+}
+
+.search-container input {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.52px;
+    text-align: left;
+    color: #539F80;
+    border: none; /* Убираем стандартную границу input */
+    outline: none; /* Убираем фокус */
+    width: 100%; /* Чтобы input занимал всё оставшееся место */
+    background-color: transparent; /* Прозрачный фон */
+}
+
+.main-content {
+    display: flex;
+    flex-grow: 1;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #f4f8f7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 8px; /* Закругление углов */
+}
+
+.sidebar ul li img {
+    width: 30px;
+    height: 30px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+}
+
+.sidebar ul li.active div {
+    background: linear-gradient(90deg, #539F80 0%, rgba(83, 159, 128, 0) 100%);
+}
+
+.sidebar ul li a:hover {
+    color: #4CAF50; /* Цвет при наведении */
+}
+
+.saved-recipes {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f4f8f7;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.saved-recipes h3 {
+    padding: 10px;
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333333;
+    background: linear-gradient(90deg, #539F80 0%, rgba(83, 159, 128, 0) 100%);
+    border-radius: 10px 10px 0 0; /* Закругление только верхних углов */
+}
+
+.horizontal-section {
+    display: flex;
+    flex-direction: row;
+    align-items: top; /* Элементы центрируются по вертикали */
+    gap: 20px; /* Расстояние между элементами */
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Отступ снизу, если нужно */
+}
+
+.vertical-section {
+    flex-direction: column; /* Элементы располагаются в строку */
+    align-items: top; /* Элементы центрируются по вертикали */
+    justify-content: space-between;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: flex-end; /* Выровнять кнопки по правому краю */
+    gap: 13px; /* Расстояние между кнопками */
+    margin-right: 30px; /* Отступ от правого края */
+    margin-top: 3px; /* Отступ сверху */
+}
+
+.custom-button {
+    background: #539F80;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+    background: #478c6f;
+}
+
+.recipe-card {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.recipe-card img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.recipe-info {
+    padding-left: 20px;
+    flex-grow: 1;
+}
+
+.recipe-info h4 {
+    font-size: 1.5rem;
+    color: #333; /* Цвет текста */
+    margin-bottom: 10px;
+}
+
+.recipe-info .macros {
+    font-size: 0.9rem;
+    color: #bbb;
+    margin-bottom: 10px;
+}
+
+.recipe-info .time-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.recipe-info .time {
+    font-size: 1rem;
+    color: #333;
+    margin-right: 20px;
+}
+
+.recipe-info .rating,
+.recipe-info .difficulty {
+    font-size: 1rem;
+    color: #333;
+}
+
+.recipe-info .rating .stars,
+.recipe-info .difficulty .stars {
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.recipe-info .difficulty {
+    display: flex;
+    align-items: center;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.text-container {
+    background-color: #F2F2F2; /* Цвет фона */
+    padding: 26px 20px; /* Отступы сверху/снизу и слева/справа */
+    display: flex; /* Используем flexbox для размещения текста и изображения */
+    align-items: center; /* Центрируем по вертикали */
+    max-width: 600px;
+    max-height: 155px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px; /* Отступ снизу, если нужно */
+}
+
+.text-container-progress {
+    background-color: #F2F2F2; /* Цвет фона */
+    padding: 28px 10px; /* Отступы сверху/снизу и слева/справа */
+    width: 600px;
+    max-height: 155px;
+    border-radius: 16px;
+    margin-top: 14px;
+}
+
+.text-container p {
+    margin: 0; /* Убираем отступы у параграфа */
+    font-size: 14px; /* Размер шрифта */
+    font-weight: 400; /* Начертание */
+    line-height: 17.07px; /* Высота строки */
+    color: black; /* Цвет текста */
+    text-align: left; /* Выравнивание текста по левому краю */
+    flex-grow: 1; /* Позволяем тексту занимать доступное пространство */
+}
+
+.text-container-progress h1 {
+    margin: 0; /* Убираем отступы у параграфа */
+    font-size: 14px; /* Размер шрифта */
+    font-weight: 700; /* Начертание */
+    line-height: 17.07px; /* Высота строки */
+    color: black; /* Цвет текста */
+    text-align: left; /* Выравнивание текста по левому краю */
+    flex-grow: 1; /* Позволяем тексту занимать доступное пространство */
+    margin-bottom: 10px;
+}
+
+.text-container-progress h2 {
+    margin: 0; /* Убираем отступы у параграфа */
+    font-size: 12px; /* Размер шрифта */
+    font-weight: 500; /* Начертание */
+    line-height: 14.63px; /* Высота строки */
+    color: black; /* Цвет текста */
+    text-align: left; /* Выравнивание текста по левому краю */
+    flex-grow: 1; /* Позволяем тексту занимать доступное пространство */
+}
+
+.highlight {
+    color: #539F80; /* Цвет фона для выделенного текста */
+}
+body {
+    font-family: 'Montserrat', sans-serif; /* Убедитесь, что у вас подключен шрифт Montserrat */
+}
+
+.filter-container {
+    background: #F2F2F2;
+    border-radius: 16px;
+    padding: 20px;
+    max-width: 600px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Добавляем тень для эффекта */
+}
+
+.filter-title {
+    color: #539F80;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: left;
+    margin-bottom: 20px; /* Отступ снизу для разделения с секциями ввода */
+}
+
+.input-section {
+    margin-bottom: 20px; /* Отступ между секциями */
+}
+
+.input-section label {
+    display: block;
+    color: black;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    margin-bottom: 5px; /* Отступ между меткой и полем ввода */
+}
+
+.input-field {
+    border: 1px solid #539F80;
+    border-radius: 8px; /* Закругление только верхних углов */
+    width: calc(100% - 20px); /* Учитываем padding */
+    height: 36px; /* Фиксированная высота */
+    padding: 10px 10px 10px 15px; /* Внутренние отступы */
+    box-sizing: border-box; /* Учитываем отступы и рамку в ширину */
+    margin-top: 20px; /* Отступ между меткой и полем ввода */
+}
+
+.progress-container { 
+    background-color: #E4E4E4;
+    width: 278px; 
+    height: 17px;
+    border-radius: 34px; 
+    margin-bottom: 24px; /* Отступ между меткой и полем ввода */
+    margin-top: 12px; /* Отступ между меткой и полем ввода */
+} 
+
+.progress-container p { 
+    /* display: block; */
+    color: black;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12.19px;
+    margin-bottom: 12px;
+    text-align: center;
+} 
+
+.progress { 
+    /* background-color: rgb(116, 194, 92);  */
+    padding: 1%; 
+    text-align: right; 
+    font-size: 20px; 
+    border-radius: 15px; 
+    height: 17px;
+} 
+
+.shopping-list {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.shopping-list h3 {
+    background: linear-gradient(90deg, #539F80 0%, rgba(83, 159, 128, 0) 100%);
+    color: white;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+}
+.meal-section {
+    margin-bottom: 20px;
+}
+.meal-section h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.meal-section ul {
+    list-style: none;
+    padding: 0;
+}
+.meal-section ul li {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+.meal-section ul li input {
+    margin-right: 10px;
+}
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.action-buttons button {
+    background-color: #539F80;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+.calendar-header {
+    background-color: white;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    width: 476px;
+}
+
+.day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 700;
+    color: #539F80;
+    width: 70px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.day.selected {
+    background-color: white;
+    border: 2px solid #539F80;
+    color: white;
+}
+
+.day-number {
+    font-size: 18px;
+    color: #539F80;
+}
+
+.day-name {
+    font-size: 14px;
+    color: #777777;
+}
+
+.chart-placeholder {
+    margin-top: 20px;
+    padding: 20px;
+    height: 300px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #539F80;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.saved-recipes-active {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f4f8f7;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.saved-recipes-active h3 {
+    padding: 10px;
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333333;
+    background: linear-gradient(90deg, #FF927C 0%, rgba(83, 159, 128, 0) 100%);
+    border-radius: 10px 10px 0 0; /* Закругление только верхних углов */
+}
