@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat';
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+.header {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.main-content {
+    display: flex;
+    flex-grow: 1;
+}
+
+/* Стили для заголовка календаря */
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.calendar-navigation a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #539F80;
+    font-weight: 400;
+}
+
+.calendar-navigation a:hover {
+    text-decoration: underline;
+}
+
+.calendar-date {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+
+.calendar-date span {
+    margin: 0 10px;
+}
+
+.arrow-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+.controls img {
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Стили для кнопки "Взять цены из магазина" */
+.shop-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    margin: 20px 0;
+}
+
+.shop-button .controls img {
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.meal-section {
+    display: flex;
+    gap: 20px;
+}
+
+.meal-box {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.meal-box h3 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+}
+
+.meal-box .meal-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.meal-box .meal-item label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.meal-box .meal-item span {
+    color: #777;
+}
+
+.meal-box .total {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.sidebar {
+    width: 300px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.sidebar button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    background-color: #539F80;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.sidebar button.secondary {
+    background-color: white;
+    color: #539F80;
+    border: 1px solid #539F80;
+}
+
+.total-summary {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.search-container {
+    width: 440px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    gap: 15px;
+    border-radius: 8px;
+    border: 1px solid #539F80;
+    opacity: 1; /* Задал видимость, так как 0px делает его невидимым */
+    background-color: white;
+}
+
+.search-container img {
+    width: 14px;
+    height: 14px;
+    margin-left: 15px; /* Отступ от левого края элемента */
+}
+
+.search-container input {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.52px;
+    text-align: left;
+    color: #539F80;
+    border: none; /* Убираем стандартную границу input */
+    outline: none; /* Убираем фокус */
+    width: 100%; /* Чтобы input занимал всё оставшееся место */
+    background-color: transparent; /* Прозрачный фон */
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: flex-end; /* Выровнять кнопки по правому краю */
+    gap: 13px; /* Расстояние между кнопками */
+    margin-right: 30px; /* Отступ от правого края */
+    margin-top: 3px; /* Отступ сверху */
+}
+
+.custom-button {
+    background: #539F80;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+    background: #478c6f;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #f4f8f7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 8px; /* Закругление углов */
+}
+
+.sidebar ul li img {
+    width: 30px;
+    height: 30px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+}
+
+.sidebar ul li.active div {
+    background: linear-gradient(90deg, #539F80 0%, rgba(83, 159, 128, 0) 100%);
+}
+
+.sidebar ul li a:hover {
+    color: #4CAF50; /* Цвет при наведении */
+}

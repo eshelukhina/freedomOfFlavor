@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freedom of Flavor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="image-container">
+                <img src="../images/header_logo.svg" alt="logo">
+            </div>
+            <div class="search-container">
+                <img src="../icons/search.svg" alt="Иконка поиска">
+                <input type="text" placeholder="Поиск рецептов на день">
+            </div>
+            <div class="buttons-container">
+                <button class="custom-button">Подбор блюд</button>
+                <button class="custom-button">Личный кабинет</button>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <aside class="sidebar">
+                <ul>
+                    <li>
+                        <div>
+                            <img src="../icons/corn.svg" alt="corn">
+                            <a href="../profile/profile.html">Мой профиль</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="../icons/dish.svg" alt="dish">
+                            <a href="../recommendations/recommendations.html">Рекомендации блюд</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="../icons/progress.svg" alt="progress">
+                            <a href="../progress/progress.html">Прогресс</a>
+                        </div>
+                    </li>
+                    <li class="active">
+                        <div>
+                            <img src="../icons/list.svg" alt="list">
+                            <a href="../list/list.html">Список покупок</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="../icons/book.svg" alt="book">
+                            <a href="#">Кулинарная книга</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="../icons/news.svg" alt="articles">
+                            <a href="#">Статьи</a>
+                        </div>
+                    </li>
+                </ul>
+            </aside>
+
+            <section>
+                <div class="calendar-header">
+                    <div class="calendar-date">
+                        <button class="arrow-button">&#8249;</button>
+                        <span>сегодня, 26 Марта</span>
+                        <button class="arrow-button">&#8250;</button>
+                    </div>
+                    <div class="calendar-navigation">
+                        <a href="#">Завтра</a>
+                        <a href="#">Неделя</a>
+                        <a href="#">Месяц</a>
+                    </div>
+                </div>
+                
+                <div class="shop-button">
+                    <span>Взять цены из магазина</span>
+                    <div class="controls">
+                        <img src="../icons/five.svg" alt="Icon 1">
+                        <img src="../icons/lenta.svg" alt="Icon 2">
+                        <img src="../icons/plus.svg" alt="Add">
+                    </div>
+                </div>
+                <div class="meal-section">
+                    <div class="meal-box">
+                        <h3>Завтрак</h3>
+                        <div class="meal-item">
+                            <label><input type="checkbox"> Овсяные хлопья</label>
+                            <span>100 г. – 50 руб.</span>
+                        </div>
+                        <div class="meal-item">
+                            <label><input type="checkbox"> Молоко</label>
+                            <span>200 мл – 30 руб.</span>
+                        </div>
+                        <div class="meal-item">
+                            <label><input type="checkbox"> Банан</label>
+                            <span>1 шт. – 20 руб.</span>
+                        </div>
+                        <div class="meal-item">
+                            <label><input type="checkbox"> Мед</label>
+                            <span>1 ст. л. – 15 руб.</span>
+                        </div>
+                        <div class="meal-item">
+                            <label><input type="checkbox"> Миндаль</label>
+                            <span>30 г. – 50 руб.</span>
+                        </div>
+                        <div class="total">Итого: 165 руб.</div>
+                    </div>
+
+                    <div class="meal-box">
+                        <h3>Ужин</h3>
+                        <div class="meal-item">
+                            <label><input type="checkbox"> Авокадо</label>
+                            <span>2 шт. – 120 руб.</span>
+                        </div>
+                        <div class="meal-item">
+                            <label><input type="checkbox"> Куриное филе</label>
+                            <span>500 г. – 200 руб.</span>
+                        </div>
+                        <div class="meal-item">
+                            <label><input type="checkbox"> Красный перец</label>
+                            <span>2 шт. – 60 руб.</span>
+                        </div>
+                        <div class="meal-item">
+                            <label><input type="checkbox"> Киноа</label>
+                            <span>500 г. – 120 руб.</span>
+                        </div>
+                        <div class="meal-item">
+                            <label><input type="checkbox"> Лосось</label>
+                            <span>300 г. – 400 руб.</span>
+                        </div>
+                        <div class="total">Итого: 930 руб.</div>
+                    </div>
+
+                    <div class="sidebar">
+                        <h3>Обед</h3>
+                        <button>Добавить блюда</button>
+                        <button class="secondary">Поем в кафе</button>
+
+                        <div class="total-summary">
+                            <span>Итого на день</span>
+                            <span>1 095 руб.</span>
+                        </div>
+
+                        <label><input type="checkbox"> Учесть оставшиеся продукты в рационе</label>
+
+                        <button>Перерасчитать смету на цену целого продукта</button>
+                        <button>Открыть доставку выбранного магазина</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
